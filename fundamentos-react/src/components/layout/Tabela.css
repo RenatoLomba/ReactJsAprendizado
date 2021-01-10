@@ -1,0 +1,22 @@
+.Tabela {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.Cabecalho {
+    background-color: burlywood;
+}
+
+.Corpo {
+    background-color: cornsilk;
+}
+
+.Corpo tr:hover {
+    background-color: #ddd;
+}
+
+.Corpo .Par {
+    background-color: rgb(235, 231, 215);
+}

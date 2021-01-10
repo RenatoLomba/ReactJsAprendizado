@@ -1,4 +1,21 @@
 body {
+    font-family: Oswald;
+    font-size: 1.4rem;
     background-color: #222;
     color: #fff;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-weight: 300;
+}
+
+h2, h3 {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
