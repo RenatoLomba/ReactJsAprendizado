@@ -1,12 +1,22 @@
 import React from 'react'
-import If from './If'
+import If, { Else } from './If'
 
 export default props => {
+    const usuario = props.usuario || {}
     return (
         <>
-            <div>
+            {/* TRECHO SÓ SERÁ EXIBIDO CASO O TESTE RETORNAR VERDADEIRO (USUARIO E NOME DE USUARIO EXISTIR) */}
+            <If test={usuario && usuario.nome}>
                 Seja Bem-vindo <strong>{usuario.nome}</strong>!
-            </div>
+                <Else>
+                    Seja Bem-vindo <strong>Usuário</strong>!
+                </Else>
+            </If>
+            {/* <If test={!usuario || !usuario.nome}>
+                <div>
+                    Seja Bem-vindo <strong>Usuário</strong>!
+                </div>
+            </If> */}
         </>
     )
 }

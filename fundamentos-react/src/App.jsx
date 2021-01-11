@@ -11,7 +11,11 @@ import FamiliaMembro from './components/basicos/FamiliaMembro'
 import ListaAlunos from './components/repeticao/ListaAlunos'
 import TabelaProdutos from './components/repeticao/TabelaProdutos'
 import ParOuImpar from './components/condicional/ParOuImpar'
-import If from './components/condicional/If'
+import UsuarioInfo from './components/condicional/UsuarioInfo'
+import DiretaPai from './components/comunicacao/DiretaPai'
+import IndiretaPai from './components/comunicacao/IndiretaPai'
+import Input from './components/formulario/Input'
+import Contador from './components/contador/Contador'
 
 //CSS
 import './App.css'
@@ -23,8 +27,22 @@ export default props => {
             <h1>Fundamentos React</h1>
 
             <div className="Cards">
+                <Card titulo="#12 - Contador baseado em Classe" color="aqua">
+                    <Contador numeroInicial={10} />
+                </Card>
+                <Card titulo="#11 - Componente Controlado" color="coral">
+                    <Input />
+                </Card>
+                <Card titulo="#10 - Comunicação indireta" color="blueviolet">
+                    <IndiretaPai />
+                </Card>
+                <Card titulo="#09 - Comunicação direta">
+                    <DiretaPai />
+                </Card>
                 <Card titulo="#08 - Renderização Condicional" color="aqua">
                     <ParOuImpar numero={9} />
+                    <UsuarioInfo usuario={{ nome: 'Renato' }} />
+                    {/* <UsuarioInfo usuario={{ email: 'rntlomba@gmail.com' }} /> */}
                 </Card>
                 <Card titulo="#07 - Tabela de Produtos" color="coral">
                     <TabelaProdutos />
