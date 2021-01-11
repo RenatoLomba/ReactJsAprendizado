@@ -29,9 +29,9 @@ export default class Contador extends React.Component {
     }
 
     //USUARIO PODERÁ MUDAR O PASSO
-    passo = (e) => {
+    setPasso = (novoPasso) => {
         this.setState({
-            passo: parseInt(e.target.value)
+            passo: novoPasso
         })
     }
 
@@ -41,14 +41,7 @@ export default class Contador extends React.Component {
             <div className="Contador">
                 <h2>Contador</h2>
                 <Display numero={this.state.numero} />
-                <div>
-                    <label>Passo: </label>
-                    <input
-                        id="passoInput"
-                        type="number"
-                        value={this.state.passo}
-                        onChange={this.passo} />
-                </div>
+                <PassoForm valorPasso={this.state.passo} funcPasso={this.setPasso} />
                 <Botoes inc={this.inc} dec={this.dec} />
             </div>
         )
