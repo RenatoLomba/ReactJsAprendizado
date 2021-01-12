@@ -1,0 +1,36 @@
+/* VARIAVEIS EM CSS */
+:root {
+    --bg-button: #f0f0f0;
+    --border-button: 1px solid #888;
+}
+
+.Button {
+    font-size: 1.4rem;
+    font-weight: 700;
+    background-color: var(--bg-button);
+    border: none;
+    border-right: var(--border-button);
+    border-bottom: var(--border-button);
+    outline: none;
+}
+
+.Button:active {
+    background-color: #bbb;
+}
+
+.Button.double {
+    grid-column: span 2;
+}
+
+.Button.triple {
+    grid-column: span 3;
+}
+
+.Button.operator {
+    background-color: #fa8231;
+    color: #fff;
+}
+
+.Button.operator:active {
+    background-color: #fa8231cc;
+}
